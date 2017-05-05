@@ -1,0 +1,5 @@
+var app = require('../app');
+var ws = require('../ws');
+
+app.server = app.listen(3000);
+app.wsServer = ws.listen(app.server);

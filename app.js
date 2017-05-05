@@ -3,7 +3,7 @@ var app = express();
 var mysql = require('mysql');
 var dotenv = require('dotenv').config();
 
-var Ω = mysql.createPool({
+Ω = mysql.createPool({
 	host: process.env.MYSQL_HOST,
 	user: process.env.MYSQL_USERNAME,
 	password: process.env.MYSQL_PASSWORD,
@@ -11,16 +11,10 @@ var Ω = mysql.createPool({
 	multipleStatements: true
 });
 
-app.post('/', function(req, res, next) {
-	Ω.query('SELECT 1', [], function(err, results) {
-		if (err) {
-			console.log(err);
-		}
-		console.log(results);
-		res.send(results);
-		Ω.release();
-		return;
-	});
-});
+var dsn = require('./routes/dsn');
+var main = require('./routes/main');
 
-app.listen(3000);
+app.use('/', main);
+app.use('/dsn', dsn);
+
+module.exports = app;
