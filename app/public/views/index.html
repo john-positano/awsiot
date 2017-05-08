@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>LPT IoT</title>
+
+		<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="/bower_components/angular/angular.min.js"></script>
+		<script src="/bower_components/socket.io-client/dist/socket.io.js"></script>
+		<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+		<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+		<base href="/">
+	</head>
+	<body ng-app="LPTIoT">
+
+		<div ui-view="header"></div>
+		<div growl></div>
+		<div class="container-fluid main-container">
+			<div class="row">
+				<div ui-view="layout"></div>
+			</div>
+		</div>
+		<div ui-view="footer"></div>		
+
+		<script src="/public/js/app.js"></script>
+		<script src="/public/js/routes.js"></script>
+	</body>
+</html>
