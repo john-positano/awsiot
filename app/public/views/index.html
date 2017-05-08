@@ -9,6 +9,7 @@
 		<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 		<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/public/styles/style.css">
 
 		<base href="/">
 	</head>
@@ -18,7 +19,7 @@
 		<div growl></div>
 		<div class="container-fluid main-container">
 			<div class="row">
-				<div ui-view="layout"></div>
+				<div ui-view="body"></div>
 			</div>
 		</div>
 		<div ui-view="footer"></div>		
@@ -28,5 +29,6 @@
 		<script src="/public/js/controllers/login.js"></script>
 		<script src="/public/js/services/login.js"></script>
 		<script src="/public/js/services/geolocation.js"></script>
+		<script src="/public/js/services/ws.js"></script>
 	</body>
 </html>

@@ -1,0 +1,13 @@
+.full-width {
+	width: 100vw;
+	height: 15vh;
+	background-color: #ffe100;
+	border: none;
+	box-shadow: 0 0 2px 2px black;
+}
+
+.full-width-body {
+	width: 100vw;
+	height: 85vh;
+	border: none;
+}

@@ -7,7 +7,7 @@ var geocoder = require('@google/maps').createClient({
 console.log(geocoder.reverseGeocode);
 
 router.post('/', function(req, res, next) {
-	geocoder.reverseGeocode({latlng: '20,20'}, function(err, response) {
+	geocoder.reverseGeocode({latlng: (req.body.latitude + ',' + req.body.longitude)}, function(err, response) {
 		if (err) {
 			next(err);
 			return;

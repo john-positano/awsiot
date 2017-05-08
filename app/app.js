@@ -15,6 +15,7 @@ var bodyParser = require('body-parser');
 var dsn = require('./routes/dsn');
 var main = require('./routes/main');
 var coordinates = require('./routes/coordinates');
+var push = require('./routes/push');
 
 app.use(bodyParser.json());
 
@@ -24,5 +25,6 @@ app.use('/bower_components', express.static(__dirname + '/../bower_components'))
 app.use('/', main);
 app.use('/coordinates', coordinates);
 app.use('/dsn', dsn);
+app.use('/push', push);
 
 module.exports = app;

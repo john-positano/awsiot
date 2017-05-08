@@ -1,5 +1,7 @@
 'use strict';
 
-angular.module('LPTIoT').controller('LoginCtrl', function ($scope) {
-	console.log('in');
+angular.module('LPTIoT').controller('LoginCtrl', function ($scope, wsService) {
+	$scope.dedicatedSpan = '';
+
+	
 });
